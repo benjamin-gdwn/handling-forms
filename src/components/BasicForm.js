@@ -29,14 +29,12 @@ const BasicForm = (props) => {
 
   } = useLogic((value) => value.includes("@"));
 
-  const error = !emailHasError && !lNameHasError && !fNameHasError;
-  const touched = fNameIsTouched && lNameTouched && emailIsTouched;
 
   let formIsValid = false;
-  if(error && touched){
-    console.log('form submitted');
-    formIsValid = true;
-}
+  if(!emailHasError && !lNameHasError && !fNameHasError) {
+    formIsValid = true
+  }
+
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -97,7 +95,7 @@ const BasicForm = (props) => {
 
       </div>
       <div className="form-actions">
-        <button>Submit</button>
+        <button disabled={!formIsValid}>Submit</button>
       </div>{" "}
     </form>
   );
