@@ -1,0 +1,6 @@
+try to re-write the custom hook, provide validation for the basic form
+
+validation of inputs
+build custom hook
+tie into basic form
+
