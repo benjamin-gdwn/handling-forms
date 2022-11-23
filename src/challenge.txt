@@ -1,0 +1,44 @@
+Challenge
+
+Create an email input, include validation and tie it into form validation
+
+current input
+
+ <div className={nameInputClasses}>
+        <label htmlFor="name">Your Name</label>
+        <input
+          // ref={nameInputRef}
+          type="text"
+          id="name"
+          onChange={nameInputChangeHandler}
+          onBlur={nameInputBlurHandler}
+          value={enteredName}
+        />
+        {nameInputIsValid && (
+          <p className="error-text">Name Must Not Be Empty</p>
+        )}
+      </div>
+
+      New Input 
+
+       <div className={nameInputClasses}>
+        <label htmlFor="email">Your Email</label>
+        <input
+          // ref={nameInputRef}
+          type="text"
+          id="email"
+          onChange={emailInputChangeHandler}
+          onBlur={emailInputBlurHandler}
+          value={enteredEmail}
+        />
+        {nameInputIsValid && (
+          <p className="error-text">Name Must Not Be Empty</p>
+        )}
+      </div>
+
+      need to create 
+
+      'onchange handler - {emailInputChangeHandler} - enteredEmail target value
+      'onblur handler - {emailInputBlurHandler} - set touched state
+      'value - value={enteredEmail} - state
+      'validity - emailInputIsValid - variable
